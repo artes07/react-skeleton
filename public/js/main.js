@@ -18062,30 +18062,26 @@ var ListItem = require('./ListItem.jsx');
 
 var ingredients = [{ "id": 1, "text": "ham" }, { "id": 2, "text": "cheese" }, { "id": 3, "text": "potatoes" }];
 
-var List = React.createClass({
-  displayName: 'List',
-
-  render: function () {
+class List extends React.Component {
+  render() {
     var listItems = ingredients.map(function (item) {
       return React.createElement(ListItem, { key: item.id, ingredient: item.text });
     });
-
     return React.createElement(
       'ul',
       null,
       listItems
     );
   }
-});
+}
 
 module.exports = List;
 
 },{"./ListItem.jsx":28,"react":26}],28:[function(require,module,exports){
 var React = require('react');
-var ListItem = React.createClass({
-  displayName: 'ListItem',
 
-  render: function () {
+class ListItem extends React.Component {
+  render() {
     return React.createElement(
       'li',
       null,
@@ -18096,7 +18092,7 @@ var ListItem = React.createClass({
       )
     );
   }
-});
+}
 
 module.exports = ListItem;
 
