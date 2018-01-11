@@ -1,0 +1,27 @@
+1) npm init
+2) npm i --save browserify
+3) npm i --save babelify
+4) npm i --save watchify
+5) npm i --save babel-preset-react
+6) npm i --save react
+7) npm i --save react-dom
+8) npm i --save babel-core
+
+"start": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+class Class extends React.Component {
+  render() {
+    return(
+    )
+  }
+}
+
+ReactDOM.render(
+  <Class  />,
+  document.getElementById('id')
+);
+
+http-server -p 8885
